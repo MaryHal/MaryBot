@@ -35,3 +35,4 @@ __pycache__/
 bin/
 .ninja_deps
 .ninja_log
+compile_commands.json

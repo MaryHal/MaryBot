@@ -95,14 +95,14 @@ void event_numeric(irc_session_t* session,
     char buf[24];
     sprintf (buf, "%d", event);
 
-    dump_event (session, buf, origin, params, paramCount);
+    dump_event(session, buf, origin, params, paramCount);
 }
 
 void event_channel(irc_session_t* session,
                    const char* event, const char* origin,
                    const char** params, unsigned int paramCount)
 {
-    dump_event (session, event, origin, params, paramCount);
+    dump_event(session, event, origin, params, paramCount);
 
     if (paramCount != 2)
         return;
@@ -119,7 +119,7 @@ void event_privmsg(irc_session_t* session,
                    const char* event, const char* origin,
                    const char** params, unsigned int paramCount)
 {
-    dump_event (session, event, origin, params, paramCount);
+    dump_event(session, event, origin, params, paramCount);
 
     printf("'%s' quietly told me (%s): %s\n",
            origin ? origin : "someone",
@@ -127,7 +127,7 @@ void event_privmsg(irc_session_t* session,
 
     // "A buffer of size 128 should be enough for most nicks."
     char nickbuf[128];
-    irc_target_get_nick (origin, nickbuf, sizeof(nickbuf));
+    irc_target_get_nick(origin, nickbuf, sizeof(nickbuf));
 
     if (!strcmp(nickbuf, "MaryHadalittle") && !strcmp(params[1], "quit"))
     {

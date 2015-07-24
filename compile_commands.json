@@ -1,7 +1,0 @@
-[
-  {
-    "directory": "/home/sanford/code/current/MaryBot",
-    "command": "clang -fpic -MMD -MF obj/src/main.o.d -c -Wall -Wextra -pedantic -pedantic-errors -std=c11 -Qunused-arguments -DNDEBUG -O3 -I./lib/libircclient/libircclient/include -L./lib/libircclient/libircclient/src -Werror src/main.c -o obj/src/main.o",
-    "file": "src/main.c"
-  }
-]

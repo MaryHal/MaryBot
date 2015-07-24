@@ -17,7 +17,7 @@
 (global-set-key (kbd "<f5>") (lambda()
                                (interactive)
                                (cd (projectile-project-root))
-                               (shell-command "python bootstrap.py --cxx=clang")
+                               (shell-command "python bootstrap.py --cxx=clang && ninja -t compdb >! compile_commands.json")
                                ))
 
 (global-set-key (kbd "C-<f5>") (lambda()
