@@ -48,9 +48,9 @@ cxxflags = ['-Wall', '-Wextra', '-pedantic', '-pedantic-errors', '-std=c11', '-Q
 #     project.libraries = ['mingw32']
 
 # libircclient
-libdirs.extend(['-L./lib/libircclient/libircclient/src'])
+libdirs.extend(['-L./lib/libircclient/src'])
 ldflags.extend(['-lircclient'])
-include.extend(['-I./lib/libircclient/libircclient/include'])
+include.extend(['-I./lib/libircclient/include'])
 
 # Jansson for Json
 libdirs.extend(['-L./lib/jansson/src/.libs'])

@@ -2,9 +2,8 @@ ninja_required_version = 1.3
 ar = ar
 cxx = clang
 cxxflags = -Wall -Wextra -pedantic -pedantic-errors -std=c11 $
-    -Qunused-arguments -DNDEBUG -O3 $
-    -I./lib/libircclient/libircclient/include -I./lib/jansson/src $
-    -L./lib/libircclient/libircclient/src -L./lib/jansson/src/.libs
+    -Qunused-arguments -DNDEBUG -O3 -I./lib/libircclient/include $
+    -I./lib/jansson/src -L./lib/libircclient/src -L./lib/jansson/src/.libs
 ldflags = -lm -lircclient -ljansson
 
 rule bootstrap

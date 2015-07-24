@@ -1,11 +1,40 @@
 
 * MaryBot
 
-  Hello.
-  
-** Building libircclient
+  This is a simple IRC bot that will log various IRC events to a JSON file.
 
-   #+BEGIN_SRC sh
-   ./configure [--enable-openssl] [--enable-ipv6]
-   make
+** Building
+
+   After cloning this repository, retrieve all the submodules:
+
+   #+BEGIN_SRC text
+     git submodule update --init --recursive
    #+END_SRC
+
+*** Building libircclient
+
+    Navigate to =lib/libircclient= and run:
+
+    #+BEGIN_SRC sh
+      ./configure [--enable-openssl] [--enable-ipv6]
+      make
+    #+END_SRC
+
+*** Building Jansson
+
+    Navigate to =lib/jansson= and run:
+
+    #+BEGIN_SRC sh
+      autoreconf -i
+      ./configure
+      make
+    #+END_SRC
+
+*** Building MaryBot
+
+    Back in the =MaryBot= directory, run our bootstrap script to generate a [[https://martine.github.io/ninja/][ninja]] build file, then run ninja:
+
+    #+BEGIN_SRC sh
+      python bootstrap.py
+      ninja
+    #+END_SRC
