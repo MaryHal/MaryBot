@@ -1,0 +1,11 @@
+
+* MaryBot
+
+  Hello.
+  
+** Building libircclient
+
+   #+BEGIN_SRC sh
+   ./configure [--enable-openssl] [--enable-ipv6]
+   make
+   #+END_SRC

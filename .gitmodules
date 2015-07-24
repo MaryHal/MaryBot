@@ -1,0 +1,6 @@
+[submodule "lib/jansson"]
+	path = lib/jansson
+	url = https://github.com/akheron/jansson.git
+[submodule "lib/libircclient"]
+	path = lib/libircclient
+	url = https://github.com/sanford1/libircclient.git
