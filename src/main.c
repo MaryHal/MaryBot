@@ -129,7 +129,7 @@ void event_privmsg(irc_session_t* session,
     char nickbuf[128];
     irc_target_get_nick(origin, nickbuf, sizeof(nickbuf));
 
-    if (!strcmp(nickbuf, "MaryHadalittle") && !strcmp(params[1], "quit"))
+    if (!strcmp(nickbuf, "MHL") && !strcmp(params[1], "quit"))
     {
         irc_cmd_quit(session, "Shutting down.");
     }
